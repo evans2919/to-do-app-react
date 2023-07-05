@@ -12,6 +12,10 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                         onClick={() => updateToDo(id)}
                     >
                         <CheckIcon />
+                        <img
+                            src="/src/assets/images/checkbox-icon.png"
+                            alt=""
+                        />
                     </button>
                 ) : (
                     <button
