@@ -11,6 +11,7 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                         className="inline-block h-5 w-5 rounded-full"
                         onClick={() => updateToDo(id)}
                     >
+                        <img src="/public/vite.svg" alt="" />
                         <CheckIcon />
                     </button>
                 ) : (
