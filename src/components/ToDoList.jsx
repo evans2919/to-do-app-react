@@ -7,13 +7,15 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
         <article className="flex justify-between border-b-2 border-b-gray-200 bg-white">
             <div className="flex items-center gap-2">
                 {state ? (
-                    <button
-                        className="inline-block h-5 w-5 rounded-full"
-                        onClick={() => updateToDo(id)}
-                    >
-                        <img src="/public/vite.svg" alt="" />
-                        <CheckIcon />
-                    </button>
+                    <>
+                        <img src="/vite.svg" alt="" />
+                        <button
+                            className="inline-block h-5 w-5 rounded-full"
+                            onClick={() => updateToDo(id)}
+                        >
+                            <CheckIcon />
+                        </button>
+                    </>
                 ) : (
                     <button
                         className="inline-block h-5 w-5 rounded-full border-2"
