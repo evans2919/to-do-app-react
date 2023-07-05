@@ -28,6 +28,11 @@ const App = () => {
         setToDo(newArray);
     };
 
+    const deleteCompleted = () => {
+        const newArray = toDo.filter((toDo) => !toDo.state);
+        setToDo(newArray);
+    };
+
     return (
         <>
             <div className="min-h-screen  bg-gray-100 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-top bg-no-repeat">
@@ -36,6 +41,7 @@ const App = () => {
                     toDo={toDo}
                     deleteToDo={deleteToDo}
                     updateToDo={updateToDo}
+                    deleteCompleted={deleteCompleted}
                 />
                 <ToDoFilters toDo={toDo} />
                 <ToDoFooter toDo={toDo} />
