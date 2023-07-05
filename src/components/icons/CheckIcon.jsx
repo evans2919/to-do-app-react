@@ -1,5 +1,5 @@
-const CheckIcon = () => {
-    return <img src="/src/assets/images/checkbox-icon.svg" alt="" />;
-}
+const CheckIcon = ({ ...props }) => {
+    return <img {...props} src="/src/assets/images/checkbox-icon.svg" alt="" />;
+};
 
-export default CheckIcon
+export default CheckIcon;
