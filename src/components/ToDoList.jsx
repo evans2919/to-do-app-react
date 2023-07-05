@@ -8,11 +8,12 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
             <div className="flex items-center gap-2">
                 {state ? (
                     <>
-                        <CheckIcon
-                            width={"20px"}
+                        <button
+                            className="inline-block h-5 w-5 rounded-full"
                             onClick={() => updateToDo(id)}
-                        />
-                       
+                        >
+                            <CheckIcon />
+                        </button>
                     </>
                 ) : (
                     <button
