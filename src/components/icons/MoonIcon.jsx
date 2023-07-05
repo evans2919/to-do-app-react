@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-const MoonIcon = ({fill}) => {
+const MoonIcon = ({ fill, ...props }) => {
     return (
         <svg
+            {...props}
+            fill={fill}
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="26"
-            fill={fill}
         >
             <path
                 fillRule="evenodd"
