@@ -21,7 +21,7 @@ const App = () => {
     const updateToDo = (id) => {
         const newArray = toDo.map((toDo) => {
             if (toDo.id === id) {
-                toDo.state = !toDo.state;
+                toDo.completed = !toDo.completed;
             }
             return toDo;
         });
@@ -29,7 +29,7 @@ const App = () => {
     };
 
     const deleteCompleted = () => {
-        const newArray = toDo.filter((toDo) => !toDo.state);
+        const newArray = toDo.filter((toDo) => !toDo.completed);
         setToDo(newArray);
     };
 

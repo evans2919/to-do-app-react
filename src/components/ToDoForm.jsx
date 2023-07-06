@@ -4,29 +4,28 @@ import { useState } from "react";
 const ToDoForm = ({ createToDo }) => {
     const [newToDo, setNewToDo] = useState({
         title: "",
-        state: false,
+        completed: false,
     });
 
-    const { title, state } = newToDo;
+    const { title, completed } = newToDo;
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!title.trim()) {
-            return alert("Please enter a title")
+            return alert("Please enter a title");
         }
         createToDo({
             id: Date.now(),
             ...newToDo,
-            state: state
-
-        })
+            completed: completed,
+        });
         setNewToDo({
             title: "",
-        })
+        });
     };
 
     const handleChange = (e) => {
-        const { name, checked, value, type } = e.target;
+        const { name, value } = e.target;
         setNewToDo({ ...newToDo, [name]: value });
     };
 
