@@ -9,7 +9,12 @@ const initialStateToDo = [];
 const App = () => {
     const [toDo, setToDo] = useState(initialStateToDo);
 
-    const createToDo = (newToDo) => {
+    const createToDo = (title) => {
+        const newToDo = {
+            id: Date.now(),
+            title,
+            completed: false,
+        };
         setToDo([...toDo, newToDo]);
     };
 

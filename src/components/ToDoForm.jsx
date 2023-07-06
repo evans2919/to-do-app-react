@@ -2,31 +2,18 @@ import { useState } from "react";
 
 /* eslint-disable react/prop-types */
 const ToDoForm = ({ createToDo }) => {
-    const [newToDo, setNewToDo] = useState({
-        title: "",
-        completed: false,
-    });
-
-    const { title, completed } = newToDo;
+    const [title, setTitle] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!title.trim()) {
-            return alert("Please enter a title");
-        }
-        createToDo({
-            id: Date.now(),
-            ...newToDo,
-            completed: completed,
-        });
-        setNewToDo({
-            title: "",
-        });
-    };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setNewToDo({ ...newToDo, [name]: value });
+        if (!title.trim()) {
+            alert("Please enter a title");
+            return setTitle("");
+        }
+
+        createToDo(title);
+        setTitle("");
     };
 
     return (
@@ -41,7 +28,7 @@ const ToDoForm = ({ createToDo }) => {
                 type="text"
                 name="title"
                 value={title}
-                onChange={handleChange}
+                onChange={(e) => setTitle(e.target.value)}
                 placeholder="Create a new todo..."
             />
         </form>
