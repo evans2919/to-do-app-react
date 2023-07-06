@@ -35,7 +35,7 @@ const App = () => {
 
     return (
         <>
-            <div className="min-h-screen  bg-gray-100 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-top bg-no-repeat">
+            <div className="min-h-screen  bg-gray-100 bg-[url('/images/bg-mobile-light.jpg')] bg-contain bg-top bg-no-repeat">
                 <ToDoHeader createToDo={createToDo} />
                 <ToDoBody
                     toDo={toDo}
