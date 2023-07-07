@@ -24,12 +24,9 @@ const App = () => {
     };
 
     const updateToDo = (id) => {
-        const newArray = toDo.map((toDo) => {
-            if (toDo.id === id) {
-                toDo.completed = !toDo.completed;
-            }
-            return toDo;
-        });
+        const newArray = toDo.map((toDo) =>
+            toDo.id === id ? { ...toDo, completed: !toDo.completed } : toDo
+        );
         setToDo(newArray);
     };
 
