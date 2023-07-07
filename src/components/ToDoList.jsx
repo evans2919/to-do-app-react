@@ -6,28 +6,25 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
     return (
         <article className="flex justify-between border-b-2 border-b-gray-200 bg-white">
             <div className="flex items-center gap-2">
-                {completed ? (
-                    <>
-                        <button
-                            className="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-[#57ddff] to-[#c058f3]"
-                            onClick={() => updateToDo(id)}
-                        >
-                            <CheckIcon />
-                        </button>
-                    </>
-                ) : (
+                <>
                     <button
-                        className="inline-block h-5 w-5 rounded-full border-2"
+                        className={`h-5 w-5 rounded-full border-2 ${
+                            completed
+                                ? "flex items-center justify-center  bg-gradient-to-br from-[#57ddff] to-[#c058f3]"
+                                : "inline-block"
+                        }`}
                         onClick={() => updateToDo(id)}
-                    ></button>
-                )}
+                    >
+                        {completed && <CheckIcon />}
+                    </button>
+                </>
 
                 <p
-                    className={
+                    className={`text-sm font-semibold ${
                         completed
-                            ? "text-sm font-semibold text-gray-400 line-through decoration-solid"
-                            : "text-sm font-semibold text-gray-600"
-                    }
+                            ? "text-gray-400 line-through"
+                            : "text-gray-600"
+                    }`}
                 >
                     {title}
                 </p>
