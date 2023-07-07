@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import CrossIcon from "./icons/CrossIcon";
-import CheckIcon from "./icons/CheckIcon";
+import CrossIcon from "./icons/IconCross";
+import CheckIcon from "./icons/IconCheck";
 const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
     const { id, title, completed } = toDo;
     return (
@@ -9,7 +9,7 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                 {completed ? (
                     <>
                         <button
-                            className="inline-block h-5 w-5 rounded-full"
+                            className="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-[#57ddff] to-[#c058f3]"
                             onClick={() => updateToDo(id)}
                         >
                             <CheckIcon />
@@ -25,7 +25,7 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                 <p
                     className={
                         completed
-                            ? "text-sm font-semibold text-gray-400 line-through"
+                            ? "text-sm font-semibold text-gray-400 line-through decoration-solid"
                             : "text-sm font-semibold text-gray-600"
                     }
                 >
