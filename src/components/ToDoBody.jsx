@@ -2,8 +2,8 @@
 import ToDoList from "./ToDoList";
 const ToDoBody = ({ toDo, deleteToDo, updateToDo, deleteCompleted }) => {
     return (
-        <main className="container mx-auto mt-4 px-4">
-            <div className="overflow-hidden rounded-md [&>article]:px-5 [&>article]:py-3 ">
+        <main className="container mx-auto mt-4 px-4 ">
+            <div className="overflow-hidden rounded-md shadow-xl [&>article]:px-5 [&>article]:py-3 ">
                 {toDo.map((toDo) => (
                     <ToDoList
                         key={toDo.id}
