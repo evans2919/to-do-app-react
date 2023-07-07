@@ -19,20 +19,23 @@ const App = () => {
     };
 
     const deleteToDo = (id) => {
-        const newArray = toDo.filter((toDo) => toDo.id !== id);
-        setToDo(newArray);
+        setToDo(
+            toDo.filter((toDo) => toDo.id !== id)
+        );
     };
 
     const updateToDo = (id) => {
-        const newArray = toDo.map((toDo) =>
-            toDo.id === id ? { ...toDo, completed: !toDo.completed } : toDo
+        setToDo(
+            toDo.map((toDo) =>
+                toDo.id === id ? { ...toDo, completed: !toDo.completed } : toDo
+            )
         );
-        setToDo(newArray);
     };
 
     const deleteCompleted = () => {
-        const newArray = toDo.filter((toDo) => !toDo.completed);
-        setToDo(newArray);
+        setToDo(
+            toDo.filter((toDo) => !toDo.completed)
+        );
     };
 
     return (
