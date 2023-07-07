@@ -24,7 +24,7 @@ const ToDoForm = ({ createToDo }) => {
         >
             <span className="inline-block h-5 w-5 rounded-full border-2"></span>
             <input
-                className="w-full border-none text-sm font-medium text-gray-400 outline-none"
+                className="w-full border-none text-lg font-medium text-gray-400 outline-none"
                 type="text"
                 name="title"
                 value={title}

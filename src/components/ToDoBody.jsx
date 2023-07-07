@@ -14,7 +14,7 @@ const ToDoBody = ({ toDo, deleteToDo, updateToDo, deleteCompleted }) => {
                 ))}
 
                 {toDo.length >= 1 && (
-                    <article className="flex justify-between  bg-white text-sm font-medium text-gray-400">
+                    <article className="flex justify-between  bg-white text-lg font-medium text-gray-400">
                         <span>{toDo.length + " " + "items left"}</span>
 
                         {toDo.filter((toDo) => toDo.completed).length >= 1 && (

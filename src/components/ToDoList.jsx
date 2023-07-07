@@ -20,7 +20,7 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                 </div>
                 <div>
                     <p
-                        className={`text-sm font-semibold ${
+                        className={`text-lg font-semibold ${
                             completed
                                 ? "text-gray-400 line-through"
                                 : "text-gray-600"
