@@ -6,7 +6,7 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
     return (
         <article className="flex justify-between border-b-2 border-b-gray-200 bg-white">
             <div className="flex items-center gap-2">
-                <>
+                <div>
                     <button
                         className={`h-5 w-5 rounded-full border-2 ${
                             completed
@@ -17,17 +17,18 @@ const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
                     >
                         {completed && <CheckIcon />}
                     </button>
-                </>
-
-                <p
-                    className={`text-sm font-semibold ${
-                        completed
-                            ? "text-gray-400 line-through"
-                            : "text-gray-600"
-                    }`}
-                >
-                    {title}
-                </p>
+                </div>
+                <div>
+                    <p
+                        className={`text-sm font-semibold ${
+                            completed
+                                ? "text-gray-400 line-through"
+                                : "text-gray-600"
+                        }`}
+                    >
+                        {title}
+                    </p>
+                </div>
             </div>
             <button onClick={() => deleteToDo(id)}>
                 <CrossIcon />
