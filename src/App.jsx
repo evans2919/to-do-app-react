@@ -19,9 +19,7 @@ const App = () => {
     };
 
     const deleteToDo = (id) => {
-        setToDo(
-            toDo.filter((toDo) => toDo.id !== id)
-        );
+        setToDo(toDo.filter((toDo) => toDo.id !== id));
     };
 
     const updateToDo = (id) => {
@@ -33,10 +31,10 @@ const App = () => {
     };
 
     const deleteCompleted = () => {
-        setToDo(
-            toDo.filter((toDo) => !toDo.completed)
-        );
+        setToDo(toDo.filter((toDo) => !toDo.completed));
     };
+
+    const toDoItemsLeft = toDo.filter((toDo) => !toDo.completed).length;
 
     return (
         <>
@@ -47,6 +45,7 @@ const App = () => {
                     deleteToDo={deleteToDo}
                     updateToDo={updateToDo}
                     deleteCompleted={deleteCompleted}
+                    toDoItemsLeft={toDoItemsLeft}
                 />
                 <ToDoFilters toDo={toDo} />
                 <ToDoFooter toDo={toDo} />
