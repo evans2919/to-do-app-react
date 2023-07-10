@@ -15,6 +15,10 @@ Este es el repositorio de la aplicación ToDo, desarrollada con React y TailWind
 
 ![Captura de pantalla de la aplicación]
 
+## Dominio de la aplicación
+
+https://evans-to-do-app-v2.netlify.app/
+
 ## Configuración del entorno
 
 1. Clona este repositorio en tu máquina local:
