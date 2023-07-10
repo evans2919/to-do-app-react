@@ -4,10 +4,11 @@ import ToDoFilters from "./components/ToDoFilters";
 import ToDoFooter from "./components/ToDoFooter";
 import { useEffect, useState } from "react";
 
-const initialStateToDo = [];
+const initialStateToDo = JSON.parse(localStorage.getItem("toDo")) || [];
 
 const App = () => {
     const [toDo, setToDo] = useState(initialStateToDo);
+    useEffect(() => localStorage.setItem("toDo", JSON.stringify(toDo)), [toDo]);
 
     const createToDo = (title) => {
         const newToDo = {
