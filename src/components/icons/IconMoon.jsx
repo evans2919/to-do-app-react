@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const MoonIcon = ({ fill, ...props }) => {
+const IconMoon = ({ fill, ...props }) => {
     return (
         <svg
             {...props}
@@ -15,4 +15,4 @@ const MoonIcon = ({ fill, ...props }) => {
         </svg>
     );
 };
-export default MoonIcon;
+export default IconMoon;
