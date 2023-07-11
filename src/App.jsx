@@ -55,7 +55,7 @@ const App = () => {
 
     return (
         <>
-            <div className="mx-auto  min-h-screen bg-gray-100 bg-[url('/images/bg-mobile-light.jpg')] bg-contain bg-top bg-no-repeat">
+            <div className="mx-auto  min-h-screen bg-gray-100 bg-[url('/images/bg-mobile-light.jpg')] bg-contain bg-top bg-no-repeat transition-all duration-500 dark:bg-[#181824] dark:bg-[url('/images/bg-mobile-dark.jpg')]">
                 <ToDoHeader createToDo={createToDo} />
                 <ToDoBody
                     toDo={filteredToDos()}

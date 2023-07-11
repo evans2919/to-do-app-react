@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const filterStyles = {
-    active: "text-blue-600 hover:text-gray-400",
-    inactive: "text-gray-400 hover:text-blue-600",
+    active: "text-blue-500 hover:text-gray-400 dark:hover:text-gray-500",
+    inactive: "text-gray-400 hover:text-blue-500 dark:text-gray-500",
 };
 
 const ToDoFilters = ({ toDo, changeFilter, filterToDo }) => {
@@ -25,7 +25,7 @@ const ToDoFilters = ({ toDo, changeFilter, filterToDo }) => {
         <>
             {toDo.length >= 1 && (
                 <section className="container mx-auto mt-4 px-4">
-                    <article className="flex justify-center gap-2 rounded-md bg-white px-5 py-3 text-lg font-semibold text-gray-400">
+                    <article className="flex justify-center gap-5 rounded-md bg-white px-5 py-3 text-lg font-bold text-gray-500 dark:bg-[#25273c]">
                         {filterButton("all")}
                         {filterButton("active")}
                         {filterButton("completed")}

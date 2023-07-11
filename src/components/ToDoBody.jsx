@@ -20,13 +20,13 @@ const ToDoBody = ({
                 ))}
 
                 {toDo.length >= 1 && (
-                    <article className="flex justify-between  bg-white text-lg font-medium text-gray-400">
+                    <article className="flex justify-between  bg-white font-normal text-gray-400 dark:bg-[#25273c] dark:text-gray-500">
                         <span>{toDoItemsLeft} items left</span>
 
                         {toDo.filter((toDo) => toDo.completed).length >= 1 && (
                             <>
                                 <button onClick={() => deleteCompleted()}>
-                                    Clear completed
+                                    Clear Completed
                                 </button>
                             </>
                         )}
