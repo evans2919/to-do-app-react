@@ -25,7 +25,10 @@ const ToDoBody = ({
 
                         {toDo.filter((toDo) => toDo.completed).length >= 1 && (
                             <>
-                                <button onClick={() => deleteCompleted()}>
+                                <button
+                                    className="hover:text-gray-800 dark:hover:text-gray-100"
+                                    onClick={() => deleteCompleted()}
+                                >
                                     Clear Completed
                                 </button>
                             </>

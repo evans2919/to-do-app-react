@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const filterStyles = {
-    active: "text-blue-500 hover:text-gray-400 dark:hover:text-gray-500",
-    inactive: "text-gray-400 hover:text-blue-500 dark:text-gray-500",
+    active: "text-blue-500",
+    inactive: "text-gray-400 hover:text-gray-800 dark:hover:text-gray-100",
 };
 
 const ToDoFilters = ({ toDo, changeFilter, filterToDo }) => {
