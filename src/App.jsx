@@ -55,7 +55,7 @@ const App = () => {
 
     return (
         <>
-            <div className="bg-custom min-h-screen bg-gray-100 bg-[url('/images/bg-mobile-light.jpg')] bg-no-repeat transition-all duration-500 dark:bg-[#181824] dark:bg-[url('/images/bg-mobile-dark.jpg')]  lg:bg-[url('/images/bg-desktop-light.jpg')] lg:dark:bg-[url('/images/bg-desktop-dark.jpg')]">
+            <div className="bg-custom min-h-screen bg-gray-100 bg-mobile-light-img bg-no-repeat transition-all duration-500 dark:bg-[#181824] dark:bg-mobile-dark-img lg:bg-light-img dark:lg:bg-dark-img">
                 <main className="container mx-auto pt-10 lg:max-w-xl">
                     <ToDoHeader createToDo={createToDo} />
                     <ToDoBody
@@ -64,13 +64,16 @@ const App = () => {
                         updateToDo={updateToDo}
                         deleteCompleted={deleteCompleted}
                         toDoItemsLeft={toDoItemsLeft}
-                    />
-
-                    <ToDoFilters
-                        toDo={toDo}
                         changeFilter={changeFilter}
                         filterToDo={filterToDo}
                     />
+                    <div className="lg:hidden">
+                        <ToDoFilters
+                            changeFilter={changeFilter}
+                            filterToDo={filterToDo}
+                        />
+                    </div>
+
                     <ToDoFooter toDo={toDo} />
                 </main>
             </div>
