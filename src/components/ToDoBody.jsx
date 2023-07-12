@@ -1,15 +1,18 @@
 /* eslint-disable react/prop-types */
 import ToDoList from "./ToDoList";
+import ToDoFilters from "./ToDoFilters";
 const ToDoBody = ({
     toDo,
     deleteToDo,
     updateToDo,
     deleteCompleted,
     toDoItemsLeft,
+    changeFilter,
+    filterToDo,
 }) => {
     return (
         <main className="container mx-auto mt-4 px-4 ">
-            <div className="overflow-hidden rounded-md shadow-xl [&>article]:px-5 [&>article]:py-3 ">
+            <div className="overflow-hidden rounded-md shadow-2xl [&>article]:px-5 [&>article]:py-3 ">
                 {toDo.map((toDo) => (
                     <ToDoList
                         key={toDo.id}
@@ -19,22 +22,25 @@ const ToDoBody = ({
                     />
                 ))}
 
-                {toDo.length >= 1 && (
-                    <article className="flex justify-between  bg-white font-normal text-gray-400 dark:bg-[#25273c] dark:text-gray-500">
-                        <span>{toDoItemsLeft} items left</span>
+                <article className="flex justify-between  bg-white font-normal text-gray-400 dark:bg-[#25273c] dark:text-gray-500">
+                    <span>{toDoItemsLeft} items left</span>
+                    <div className="hidden lg:flex">
+                        <ToDoFilters
+                            toDo={toDo}
+                            changeFilter={changeFilter}
+                            filterToDo={filterToDo}
+                        />
+                    </div>
 
-                        {toDo.filter((toDo) => toDo.completed).length >= 1 && (
-                            <>
-                                <button
-                                    className="hover:text-gray-800 dark:hover:text-gray-100"
-                                    onClick={() => deleteCompleted()}
-                                >
-                                    Clear Completed
-                                </button>
-                            </>
-                        )}
-                    </article>
-                )}
+                    <>
+                        <button
+                            className="hover:text-gray-800 dark:hover:text-gray-100"
+                            onClick={() => deleteCompleted()}
+                        >
+                            Clear Completed
+                        </button>
+                    </>
+                </article>
             </div>
         </main>
     );
