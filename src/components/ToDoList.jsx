@@ -4,7 +4,7 @@ import CheckIcon from "./icons/IconCheck";
 const ToDoList = ({ toDo, deleteToDo, updateToDo }) => {
     const { id, title, completed } = toDo;
     return (
-        <article className="flex justify-between border-b border-b-gray-300 bg-white dark:border-b-gray-600 dark:bg-[#25273c] lg:[&>.delete-button]:hover:flex [&>div>div>button]:hover:border-gray-500 [&>div>div>button]:dark:hover:border-gray-100">
+        <article className="flex justify-between border-b border-b-gray-300 bg-white dark:border-b-gray-600 dark:bg-[#25273c] lg:[&>.delete-button]:hover:flex lg:[&>div>div>button]:hover:border-gray-500 lg:[&>div>div>button]:dark:hover:border-gray-100">
             <div className="flex items-center gap-2">
                 <div className="flex">
                     <button
