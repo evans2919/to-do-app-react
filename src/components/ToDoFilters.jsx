@@ -23,15 +23,13 @@ const ToDoFilters = ({ changeFilter, filterToDo }) => {
     };
 
     return (
-        <>
-            <section className="container mx-auto mt-4 justify-center px-4 lg:mt-0 lg:flex lg:px-0">
-                <article className="lg:text-[16px] flex justify-center gap-5 rounded-md bg-white px-5 py-3 text-lg font-bold text-gray-500 dark:bg-[#25273c] lg:px-0 lg:py-0">
-                    {filterButton("all")}
-                    {filterButton("active")}
-                    {filterButton("completed")}
-                </article>
-            </section>
-        </>
+        <section className="container mx-auto mt-4 justify-center px-4 lg:mt-0 lg:flex lg:px-0">
+            <article className="flex justify-center gap-5 rounded-md bg-white px-5 py-3 text-lg font-bold text-gray-500 dark:bg-[#25273c] lg:px-0 lg:py-0 lg:text-[16px]">
+                {filterButton("all")}
+                {filterButton("active")}
+                {filterButton("completed")}
+            </article>
+        </section>
     );
 };
 

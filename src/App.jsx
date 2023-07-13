@@ -54,30 +54,28 @@ const App = () => {
     };
 
     return (
-        <>
-            <div className="bg-custom min-h-screen bg-gray-100 bg-mobile-light-img bg-no-repeat transition-all duration-500 dark:bg-[#181824] dark:bg-mobile-dark-img lg:bg-light-img dark:lg:bg-dark-img">
-                <main className="container mx-auto pt-10 lg:max-w-xl">
-                    <ToDoHeader createToDo={createToDo} />
-                    <ToDoBody
-                        toDo={filteredToDos()}
-                        deleteToDo={deleteToDo}
-                        updateToDo={updateToDo}
-                        deleteCompleted={deleteCompleted}
-                        toDoItemsLeft={toDoItemsLeft}
+        <div className="bg-custom min-h-screen bg-gray-100 bg-mobile-light-img bg-no-repeat transition-all duration-500 dark:bg-[#181824] dark:bg-mobile-dark-img lg:bg-light-img dark:lg:bg-dark-img">
+            <main className="container mx-auto pt-10 lg:max-w-xl">
+                <ToDoHeader createToDo={createToDo} />
+                <ToDoBody
+                    toDo={filteredToDos()}
+                    deleteToDo={deleteToDo}
+                    updateToDo={updateToDo}
+                    deleteCompleted={deleteCompleted}
+                    toDoItemsLeft={toDoItemsLeft}
+                    changeFilter={changeFilter}
+                    filterToDo={filterToDo}
+                />
+                <div className="lg:hidden">
+                    <ToDoFilters
                         changeFilter={changeFilter}
                         filterToDo={filterToDo}
                     />
-                    <div className="lg:hidden">
-                        <ToDoFilters
-                            changeFilter={changeFilter}
-                            filterToDo={filterToDo}
-                        />
-                    </div>
+                </div>
 
-                    <ToDoFooter toDo={toDo} />
-                </main>
-            </div>
-        </>
+                <ToDoFooter />
+            </main>
+        </div>
     );
 };
 
