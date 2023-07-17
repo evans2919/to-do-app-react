@@ -62,5 +62,5 @@ Si deseas contribuir a este proyecto, puedes seguir estos pasos:
 1. Haz un fork de este repositorio.
 2. Crea una nueva rama para tu contribución: `git checkout -b mi-rama`
 3. Realiza los cambios deseados y realiza commits: `git commit -m "Descripción de los cambios"`
-4. Envía los cambios a tu repositorio fork: `git push origin mi-rama`
+4. Envía los cambios a tu repositorio fork: `git push origin mi-rama`.
 5. Abre un Pull Request en este repositorio y describe tus cambios.
