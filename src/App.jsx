@@ -14,7 +14,7 @@ const App = () => {
 
     const createToDo = (title) => {
         const newToDo = {
-            id: Date.now(),
+            id: crypto.randomUUID(),
             title,
             completed: false,
         };
